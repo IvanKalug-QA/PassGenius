@@ -1,0 +1,15 @@
+{% with request.resolver_match.view_name as view_name %}
+  <header>
+    <div class="container py-3">
+      <ul class="nav justify-content-center">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link {% if view_name == 'homepage:index' %} active {% endif %}" aria-current="page" href="{% url 'homepage:index' %}">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if view_name == 'homepage:about' %} active {% endif %}" href="{% url 'homepage:about' %}">О проекте</a>
+        </ul>
+      </ul>
+    </div>
+  </header>
+{% endwith %}

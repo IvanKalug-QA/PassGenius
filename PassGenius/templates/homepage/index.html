@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="text-center">
+    <p><h1><b>Приветствую тебя дорогой друг!</b></h1></p>
+    <p></h2><b>Это генератор паролей</b></h2></p>
+    <a href='{% url "generate:generate" %}'>
+      <button type="button" class="btn btn-warning">
+      Перейти к генерации
+    </button>
+    </a>
+  </div>
+{% endblock content %}
